@@ -27,21 +27,32 @@
     padding-top: 50px;
     font-size: xx-large;
 }
-.content3{
-    display: flex;
-    justify-items: auto;
-    justify-content: space-around;
+ .content3{
+    
+    justify-items: flex-start;
+    justify-content: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    
+    display:flex
 }
+.card:hover {
+    box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
 .contnent4{
     display: flex;
-    justify-items: auto;
-    justify-content: space-around; 
+    justify-content: center; 
     margin-bottom: 20px;
+   
+
+
 }
 .content3{
     display: flex;
     justify-items: auto;
     justify-content: space-around;
+
 }
 .trends1{
     justify-content: space-around;
@@ -56,6 +67,9 @@
     position: absolute;
     background-color: red;
     color: white;
+}
+.trend{
+    margin-left: 40px;
 }
 
 .button1{

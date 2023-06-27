@@ -44,7 +44,7 @@
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
-            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -52,9 +52,9 @@
         <!-- Spinner End -->
 
         <!-- Header Start -->
-        <div class="container-fluid bg-dark  px-0">
+        <div class="container-fluid bg-black  px-0">
             <div class="row gx-0">
-                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                <div class="col-lg-3 bg-black d-none d-lg-block">
                     <a href="index.html"
                         class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary text-uppercase">Hotel</h1>
@@ -74,122 +74,146 @@
                         </div>
                         <div class="col-lg-5 px-5 text-end">
                             <div class="d-inline-flex align-items-center py-2">
-                                <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-facebook-f text-white"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-twitter text-white"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-instagram text-white"></i></a>
+                                <a class="" href=""><i class="fab fa-youtube text-white"></i></a>
                             </div>
                         </div>
                     </div>
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                    <nav class="navbar navbar-expand-lg bg-black navbar-black  p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotel</h1>
+                            <h1 class="m-0 text-primary  text-uppercase">Hotel</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="#about" class="nav-item nav-link">About</a>
-                                <a href="#service" class="nav-item nav-link">Services</a>
-                                <a routerLink="rooms"  href="#"  routerLink="rooms" class="nav-item nav-link">Rooms</a>
+                            <div class="navbar-nav mr-auto text-white py-0">
+                                <a href="index.html" class="nav-item nav-link active text-white">Home</a>
+                                <a href="#about" class="nav-item nav-link text-white">About</a>
+                                <a href="#service" class="nav-item nav-link text-white">Services</a>
+                                <a routerLink="rooms" href="#" routerLink="rooms" class="nav-item nav-link text-white">Rooms</a>
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking.html" class="dropdown-item">Booking</a>
-                                        <a href="#team" class="dropdown-item">Our Team</a>
-                                        <a href="#testimonial" class="dropdown-item">Testimonial</a>
+                                        <a href="booking.html" class="dropdown-item text-white ">Booking</a>
+                                        <a href="#team" class="dropdown-item text-white">Our Team</a>
+                                        <a href="#testimonial" class="dropdown-item text-white">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="#contact" class="nav-item nav-link">Contact</a>
+                                <a href="#contact" class="nav-item nav-link text-white">Contact</a>
                             </div>
-                            <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog"
-                                aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
+                            <!-- reactive forms -->
+
+                            <div class="container d-flex justify-content-end">
+                                <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                                    data-bs-target="#myModal">
+                                    Host Hotel
+                                </button>
+                                <button type="button"
+                                class="btn btn-link d-flex justify-content-center" data-bs-toggle="modal"
+                                data-bs-target="#myLogin">login</button>
+                            </div>
+
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header text-center">
-                                            <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body mx-3">
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-user prefix grey-text"></i>
-                                                <input type="text" id="orangeForm-name" class="form-control validate">
-                                                <label data-error="wrong" data-success="right"
-                                                    for="orangeForm-name">Your name</label>
+
+                                        <form [formGroup]="addHost" >
+                                            <div class="row col-12 p-4">
+                                                <span class="fa fa-user p-2"></span>
+                                                <h3>Full Name</h3>
+                                                <input type="text" class="form-control form form-control"
+                                                        placeholder="Enter fullname" name="fullname" formControlName="name">
+                                                        <small  *ngIf="addHost.controls['name'].dirty && addHost.hasError('required', 'name')" class="text-danger">*fullname is required</small>
+
                                             </div>
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-envelope prefix grey-text"></i>
-                                                <input type="email" id="orangeForm-email" class="form-control validate">
-                                                <label data-error="wrong" data-success="right"
-                                                    for="orangeForm-email">Your email</label>
+                                            <div class="row col-12 p-4">
+                                                <span class="fa fa-address-book p-2"></span>
+                                                <h3>Email</h3>
+                                                <input type="email" class="form-control" placeholder="Enter Email"
+                                                    name="email" formControlName="email">
+                                                    <small  *ngIf="addHost.controls['email'].dirty && addHost.hasError('required', 'email')" class="text-danger">*email is required</small>
+
                                             </div>
+                                            <div class="row col-12 p-4">
+                                                <span class="fa fa-user p-2"></span>
+                                                    <h3>User Name</h3>
+                                                    <input type="text" class="form-control" placeholder="Enter username"
+                                                        name="username" formControlName="username">
+                                                        <small  *ngIf="addHost.controls['username'].dirty && addHost.hasError('required', 'username')" class="text-danger">*username is required</small>
 
-                                            <div class="md-form mb-4">
-                                                <i class="fas fa-lock prefix grey-text"></i>
-                                                <input type="password" id="orangeForm-pass"
-                                                    class="form-control validate">
-                                                <label data-error="wrong" data-success="right"
-                                                    for="orangeForm-pass">Your password</label>
                                             </div>
+                                            <div class="row col-12 p-4">
+                                                <span class="fa fa-unlock-alt p-2"></span>
+                                                    <h3>Password</h3>
+                                                    <input type="password" class="form-control"
+                                                        placeholder="Enter password" name="password" formControlName="password">
+                                                        <small  *ngIf="addHost.controls['password'].dirty && addHost.hasError('required', 'password')" class="text-danger">*password is required</small>
 
-                                        </div>
-                                        <div class="modal-footer d-flex justify-content-center">
-                                            <button class="btn btn-deep-orange">Create Account</button>
-                                        </div>
-                                        <div class="modal-footer d-flex justify-content-end">
-                                            <p>if you have an account?</p> <a href=""
-                                                class="btn btn-default btn-rounded mb-4" data-toggle="modal"
-                                                data-target="#modalLoginForm">SIGN IN</a>
-                                        </div>
-                                        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header text-center">
-                                                        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body mx-3">
-                                                        <div class="md-form mb-5">
-                                                            <i class="fas fa-envelope prefix grey-text"></i>
-                                                            <input type="email" id="defaultForm-email"
-                                                                class="form-control validate">
-                                                            <label data-error="wrong" data-success="right"
-                                                                for="defaultForm-email">Your email</label>
-                                                        </div>
+                                            </div>
+                                            <div class="row p-4">
+                                                <div class="col d-flex">
 
-                                                        <div class="md-form mb-4">
-                                                            <i class="fas fa-lock prefix grey-text"></i>
-                                                            <input type="password" id="defaultForm-pass"
-                                                                class="form-control validate">
-                                                            <label data-error="wrong" data-success="right"
-                                                                for="defaultForm-pass">Your password</label>
-                                                        </div>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">cancel</button>
 
-                                                    </div>
-                                                    <div class="modal-footer d-flex justify-content-center">
-                                                        <button class="btn btn-default">Login</button>
-                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <button [disabled]="addHost.invalid" type="submit" class="btn btn-primary"
+                                                        data-bs-dismiss="modal" (click)="saveData()">create account</button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
+
+                                        <!-- Modal footer -->
+
 
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="text-center">
-                                <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
-                                    data-target="#modalRegisterForm">HOST HOSTEL</a>
+                            <div class="modal fade h-100" id="myLogin" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <form [formGroup]="loginHost">
+                                            <div class="row p-4 ">
+                                                <div class="col">
+                                                    
+                                                    <span class="fa fa-address-book p-2"></span>
+                                                    <h3>Email</h3>
+                                                    <input type="email" class="form-control" placeholder="Enter Email"
+                                                        name="email" formControlName="email">
+                                                        <small *ngIf="loginHost.controls['email'].dirty && loginHost.hasError('required', 'email')" class="text-danger">*email is required</small>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="fa fa-unlock-alt p-2"></span>
+                                                    <h3>Password</h3>
+                                                    <input type="password" class="form-control"
+                                                        placeholder="Enter password" name="password" formControlName="password">
+                                                        <small  *ngIf="loginHost.controls['password'].dirty && loginHost.hasError('required', 'password')" class="text-danger">*password is required</small>
+                                                </div>
+                                            </div>
+                                            <div class="row p-4 ">
+                                                <div class="col d-flex">
+
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">cancel</button>
+
+                                                </div>
+                                                <div class="col">
+                                                    <button [disabled]="loginHost.invalid" type="submit" class="btn btn-primary"
+                                                        data-bs-dismiss="modal" (click)="loginData()">Login</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </nav>
@@ -223,52 +247,6 @@
             </a>
         </div>
         <!-- Carousel End -->
-
-        <!-- Booking Start -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div> -->
-                    <!-- </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Booking End -->
 
         <!-- About Start -->
         <div id="about" class="container-xxl py-5">
@@ -348,7 +326,9 @@
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="assets/images/room-1.jpg" alt="">
-                                <div class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</div>
+                                <div
+                                    class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                                    $100/Night</div>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -371,7 +351,8 @@
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
+                                        Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -381,7 +362,9 @@
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="assets/images/room-2.jpg" alt="">
-                                <div class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</div>
+                                <div
+                                    class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                                    $100/Night</div>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -404,7 +387,8 @@
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
+                                        Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -414,7 +398,9 @@
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="assets/images/room-3.jpg" alt="">
-                                <div class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</div>
+                                <div
+                                    class="price position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                                    $100/Night</div>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -437,7 +423,8 @@
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
+                                        Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -452,7 +439,7 @@
         <!-- Video Start -->
         <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
             <div class="row g-0">
-                <div class="col-md-6 bg-dark d-flex align-items-center">
+                <div class="col-md-6 bg-black d-flex align-items-center">
                     <div class="p-5">
                         <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                         <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
@@ -460,7 +447,7 @@
                             diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
                             magna dolore erat amet</p>
                         <a routerLink="rooms" href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
-                        
+
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -507,7 +494,7 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
                                     <i class="fa fa-hotel fa-2x text-primary"></i>
                                 </div>
                             </div>
@@ -520,7 +507,7 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
                                     <i class="fa fa-utensils fa-2x text-primary"></i>
                                 </div>
                             </div>
@@ -533,7 +520,7 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
                                     <i class="fa fa-spa fa-2x text-primary"></i>
                                 </div>
                             </div>
@@ -546,7 +533,7 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
                                     <i class="fa fa-swimmer fa-2x text-primary"></i>
                                 </div>
                             </div>
@@ -559,8 +546,8 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
-                                    <i class="fa fa-glass-cheers bg-danger fa-2x text-primary"></i>
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
+                                    <i class="fa fa-glass-cheers  fa-2x text-primary"></i>
                                 </div>
                             </div>
                             <h5 class="mb-3">Event & Party</h5>
@@ -572,7 +559,7 @@
                         <a class="service-item rounded serv" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-danger">
+                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
                                     <i class="fa fa-dumbbell fa-2x text-primary"></i>
                                 </div>
                             </div>
@@ -588,10 +575,12 @@
 
 
         <!-- Testimonial Start -->
-        <div id="testimonial" class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn testimonial1"  data-wow-delay="0.1s">
+        <div id="testimonial" class="container-xxl testimonial my-5 py-5 bg-black wow zoomIn testimonial1"
+            data-wow-delay="0.1s">
             <div class="container">
                 <div class="owl-carousel testimonial-carousel py-5 d-flex justify-content-center">
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
+                    <div
+                        class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
                         <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
                             diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
                         <div class="d-flex align-items-center">
@@ -604,7 +593,8 @@
                         </div>
                         <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
+                    <div
+                        class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
                         <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
                             diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
                         <div class="d-flex align-items-center">
@@ -708,8 +698,8 @@
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="assets/images/team-4.jpg" alt="">
-                                <div
-                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex "
+                                    style="align-items:center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
                                             class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
@@ -753,7 +743,7 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-black text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">

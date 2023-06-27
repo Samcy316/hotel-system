@@ -2,7 +2,7 @@
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
-    --dark: #0F172B;
+   
 }
 
 .fw-medium {
@@ -494,9 +494,9 @@
     border-right: none;
 }
 .news{
-    background-color: #FEA116;
+    background-color: rgba(7, 7, 76, 0.789);
 }
 .serv{
-    background-color: #eb16fe;
-    color: white;
+    background-color: rgba(245, 245, 245, 0.36);
+    color: black;
 }
