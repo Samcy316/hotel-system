@@ -11,6 +11,11 @@ import { BookingpageComponent } from './bookingpage/bookingpage.component';
 import { HttpClientModule}from '@angular/common/http';
 import { UserRegistrationService } from './user-registration.service';
 import { ListingComponent } from './listing/listing.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +23,9 @@ import { ListingComponent } from './listing/listing.component';
     RoompageComponent,
     BookingpageComponent,
     ListingComponent,
+    LoginComponent,
+    SignupComponent,
+    AdminpageComponent,
     
   
   ],
@@ -29,6 +37,7 @@ import { ListingComponent } from './listing/listing.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatRadioModule,
 
   ],
   providers: [UserRegistrationService],

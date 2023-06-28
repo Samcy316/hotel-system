@@ -43,12 +43,12 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner"
+        <!-- <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
         <!-- Header Start -->
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <nav class="navbar navbar-expand-lg bg-black navbar-black  p-3 p-lg-0">
+                    <nav class="navbar navbar-expand-lg bg-black navbar-dark  p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary  text-uppercase">Hotel</h1>
                         </a>
@@ -109,112 +109,10 @@
                             <!-- reactive forms -->
 
                             <div class="container d-flex justify-content-end">
-                                <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                                    data-bs-target="#myModal">
+                                <button type="button" class="btn btn-link " routerLink="/signup">
                                     Host Hotel
-                                </button>
-                                <button type="button"
-                                class="btn btn-link d-flex justify-content-center" data-bs-toggle="modal"
-                                data-bs-target="#myLogin">login</button>
-                            </div>
-
-                            <!-- The Modal -->
-                            <div class="modal fade" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <form [formGroup]="addHost" >
-                                            <div class="row col-12 p-4">
-                                                <span class="fa fa-user p-2"></span>
-                                                <h3>Full Name</h3>
-                                                <input type="text" class="form-control form form-control"
-                                                        placeholder="Enter fullname" name="fullname" formControlName="name">
-                                                        <small  *ngIf="addHost.controls['name'].dirty && addHost.hasError('required', 'name')" class="text-danger">*fullname is required</small>
-
-                                            </div>
-                                            <div class="row col-12 p-4">
-                                                <span class="fa fa-address-book p-2"></span>
-                                                <h3>Email</h3>
-                                                <input type="email" class="form-control" placeholder="Enter Email"
-                                                    name="email" formControlName="email">
-                                                    <small  *ngIf="addHost.controls['email'].dirty && addHost.hasError('required', 'email')" class="text-danger">*email is required</small>
-
-                                            </div>
-                                            <div class="row col-12 p-4">
-                                                <span class="fa fa-user p-2"></span>
-                                                    <h3>User Name</h3>
-                                                    <input type="text" class="form-control" placeholder="Enter username"
-                                                        name="username" formControlName="username">
-                                                        <small  *ngIf="addHost.controls['username'].dirty && addHost.hasError('required', 'username')" class="text-danger">*username is required</small>
-
-                                            </div>
-                                            <div class="row col-12 p-4">
-                                                <span class="fa fa-unlock-alt p-2"></span>
-                                                    <h3>Password</h3>
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Enter password" name="password" formControlName="password">
-                                                        <small  *ngIf="addHost.controls['password'].dirty && addHost.hasError('required', 'password')" class="text-danger">*password is required</small>
-
-                                            </div>
-                                            <div class="row p-4">
-                                                <div class="col d-flex">
-
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">cancel</button>
-
-                                                </div>
-                                                <div class="col">
-                                                    <button [disabled]="addHost.invalid" type="submit" class="btn btn-primary"
-                                                        data-bs-dismiss="modal" (click)="saveData()">create account</button>
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <!-- Modal footer -->
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="modal fade h-100" id="myLogin" >
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <form [formGroup]="loginHost">
-                                            <div class="row p-4 ">
-                                                <div class="col">
-                                                    
-                                                    <span class="fa fa-address-book p-2"></span>
-                                                    <h3>Email</h3>
-                                                    <input type="email" class="form-control" placeholder="Enter Email"
-                                                        name="email" formControlName="email">
-                                                        <small *ngIf="loginHost.controls['email'].dirty && loginHost.hasError('required', 'email')" class="text-danger">*email is required</small>
-                                                </div>
-                                                <div class="col">
-                                                    <span class="fa fa-unlock-alt p-2"></span>
-                                                    <h3>Password</h3>
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Enter password" name="password" formControlName="password">
-                                                        <small  *ngIf="loginHost.controls['password'].dirty && loginHost.hasError('required', 'password')" class="text-danger">*password is required</small>
-                                                </div>
-                                            </div>
-                                            <div class="row p-4 ">
-                                                <div class="col d-flex">
-
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">cancel</button>
-
-                                                </div>
-                                                <div class="col">
-                                                    <button [disabled]="loginHost.invalid" type="submit" class="btn btn-primary"
-                                                        data-bs-dismiss="modal" (click)="loginData()">Login</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                            </button>
+                            </div>        
                         </div>
                     </nav>
                 </div>
