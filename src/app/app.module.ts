@@ -15,6 +15,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { AdminlistComponent } from './adminlist/adminlist.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
     LoginComponent,
     SignupComponent,
     AdminpageComponent,
+    AdminlistComponent,
     
   
   ],

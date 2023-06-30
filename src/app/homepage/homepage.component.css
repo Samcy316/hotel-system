@@ -500,3 +500,14 @@
     background-color: rgba(245, 245, 245, 0.36);
     color: black;
 }
+.video1{
+    height: 100vh;
+    background: linear-gradient(to top, #bcbcf5 30%, #05a1f5 90%) no-repeat;
+}
+.video2{
+    display: flex;
+    justify-content: center;
+    color:rgb(244, 206, 206);
+    font-weight: 1000;
+    padding-top: 10px;
+}

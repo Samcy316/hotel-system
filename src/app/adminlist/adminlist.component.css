@@ -1,0 +1,27 @@
+.alt{
+    background-image: url(/assets/images/carousel-1.jpg);
+}
+.mat-mdc-radio-button~.mat-mdc-radio-button {
+    margin-left: 16px;
+}
+
+
+.outer1 {
+    height: 100vh;
+    max-height: fit-content;
+    background: linear-gradient(to top, #bcbcf5 30%, #05a1f5 90%) no-repeat;
+    align-items: center;
+    opacity: 0.85;
+   
+
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+small {
+    color: black;
+    font-weight: 200;
+    font-style: normal;
+}

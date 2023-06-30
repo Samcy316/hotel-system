@@ -1,0 +1,140 @@
+<div class="container-xxl-fluid alt">
+    <div class="container-fluid pt-5 mt-2 outer1 ">
+        <div class="outer">
+            <h1 class="font-weight-bold pt-3  align-items-center d-flex justify-content-center">List Your Hotel</h1>
+        </div>
+        <div class="row">
+            <div class="col col-8">
+                <form #addhotelForm="ngForm" (ngSubmit)="addHotel(addhotelForm)">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>Hotel Name</small>
+
+                                <input type="text" class="form-control" placeholder="Enter Hotelname"
+                                    [(ngModel)]="addhotel.name" name="name">
+                            </div>
+                        </div>
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>price</small>
+
+                                <input type="number" class="form-control" placeholder="Enter price"
+                                    [(ngModel)]="addhotel.pricing" name="pricing">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>Location</small>
+
+                                <input type="text" class="form-control" placeholder="Enter location"
+                                    [(ngModel)]="addhotel.location" name="location">
+                            </div>
+                        </div>
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>Area</small>
+
+                                <input type="text" class="form-control" placeholder="Enter area"
+                                    [(ngModel)]="addhotel.place" name="place">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>no.rooms</small>
+
+                                <input type="number" class="form-control" placeholder="Enter no.room"
+                                    [(ngModel)]="addhotel.rooms_available" name="rooms_available">
+                            </div>
+                        </div>
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>no.bed</small>
+
+                                <input type="number" class="form-control" placeholder="Enter no.bed"
+                                    [(ngModel)]="addhotel.no_of_beds" name="no_of_beds">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row d-flex justify-content-center">
+                        <div class="col col-6 mt-2">
+                            <div class="input-field">
+                                <small>hotel photos</small>
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile02" multiple />
+                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-4 mt-2">
+                            <div class="input-field">
+                                <small>Description</small>
+                                <textarea class="form-control" rows="5" id="comment" [(ngModel)]="addhotel.description"
+                                    name="description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="outer">
+                        <h1 class="font-weight-bold pt-3  align-items-center d-flex justify-content-center">Features of
+                            Hotel
+                        </h1>
+                    </div>
+                    <div class="row d-flex justify-content-center ">
+                        <div class="col col-6 ms-5 mt-2">
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Entertainment</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="2">Bar</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="3">Swimming Pool</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-6  ms-5 mt-2">
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Parking</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">breakFast</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Washing Services</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-6  ms-5 me-6 mt-2">
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">WIFI</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Room Service</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Fitness Center</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div> -->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-6  ms-5 mt-2">
+                            <button type="submit" class="btn btn-primary btn-block mt-4 w-100 mb-2">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col col-4">
+                <input type="file" multiple value="Select" #selectFile
+                (change)="onFileSelected($event)">
+            </div>
+        </div>
+    </div>
+</div>

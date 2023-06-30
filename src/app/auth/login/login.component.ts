@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserRegistrationService } from 'src/app/user-registration.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit{
   type:string ="password";
   isText: boolean=false;
   eyeIcon: string = "fa-eye-slash";
-  constructor(private formBuilder:FormBuilder, private service:UserRegistrationService ) {}
+  constructor(private formBuilder:FormBuilder, private service:UserRegistrationService, private router:Router ) {}
   loginHost!: FormGroup;
   ngOnInit(): void {
     this.loginHost=this.formBuilder.group({
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit{
       next:(res)=>{
         alert("login successfull")
         this.loginHost.reset();
+        this.router.navigate(['admin']);
       },
       error:(err)=>{
         alert("error try again")

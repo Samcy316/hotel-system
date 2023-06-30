@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserRegistrationService } from 'src/app/user-registration.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit{
   loginHost!:FormGroup;
   signupHost!:FormGroup;
 
-  constructor(private formBuilder:FormBuilder, private service:UserRegistrationService) {}
+  constructor(private formBuilder:FormBuilder, private service:UserRegistrationService, private router:Router) {}
 
   ngOnInit(): void {
     this.signupHost=this.formBuilder.group({
@@ -28,11 +29,14 @@ export class SignupComponent implements OnInit{
     
   }
   saveData(){
+    console.log(this.signupHost.value)
     this.service.createHost(this.signupHost.value).
     subscribe({
       next:(res)=>{
         alert("sucessfully signed Up")
         this.signupHost.reset();
+        this.router.navigate(['login']);
+        console.log(this.signupHost.value)
       },
       error:(err)=>{
         alert("Error Occured")

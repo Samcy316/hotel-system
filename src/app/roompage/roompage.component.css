@@ -81,9 +81,11 @@
     color: whitesmoke;
     
     
+    
     width: 100px;
     border-radius: 10px;
 }
+
 .quick{
     padding-left: 50px;
     font-weight: 200;
@@ -178,5 +180,5 @@
     border-right: none;
 }
 .news{
-    background-color: #FEA116;
+    background-color: rgba(7, 7, 76, 0.789);
 }

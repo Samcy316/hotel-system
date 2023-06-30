@@ -1,6 +1,6 @@
 .outer{
-    height: 100vh;
-    background: linear-gradient(to top,#c9c9ff 50%, #f66eb4 90% ) no-repeat;
+    height: fit-content;
+    background: linear-gradient(to top,#c9c9ff 20%, #f66eb4 90% ) no-repeat;
 }
 .panel-heading{
     text-align: center;

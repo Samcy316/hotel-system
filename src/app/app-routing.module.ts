@@ -7,6 +7,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookingpageComponent } from './bookingpage/bookingpage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { AdminlistComponent } from './adminlist/adminlist.component';
 const routes: Routes = [
   {path:'', component:HomepageComponent},
   {path:'rooms', component:RoompageComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'booking',component:BookingpageComponent},
-  {path: 'admin', component:AdminpageComponent}
+  {path: 'admin', component:AdminpageComponent},
+  {path:'adminlist', component:AdminlistComponent}
   
 
 ];
