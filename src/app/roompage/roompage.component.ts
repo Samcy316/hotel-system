@@ -12,4 +12,11 @@ export class RoompageComponent {
     current : false,
     next : false
   }
+  toggle = true;
+status = 'Enable'; 
+
+enableDisableRule() {
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? 'Enable' : 'Disable';
+}
 }

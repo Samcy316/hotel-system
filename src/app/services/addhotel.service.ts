@@ -9,8 +9,14 @@ export class AddhotelService {
 
   constructor(private http: HttpClient) { }
   public addHotel1(addhotel:FormData){
-    return this.http.post<selfOnboarding>("https://hotel-ipd6.onrender.com/admin/CreateHotel", addhotel);
+    return this.http.post<selfOnboarding>(" http://localhost:3000/hoteldetails", addhotel);
 
+  }
+  public getAllHotel1(){
+    return this.http.get<selfOnboarding[]>("https://hotel-ipd6.onrender.com/hotels/listing/get_hotel/3");
+  }
+  public deleteHotel(id: number){
+    return this.http.delete(" http://localhost:3000/hoteldetails"+id)
   }
 
 }

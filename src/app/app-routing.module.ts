@@ -8,6 +8,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BookingpageComponent } from './bookingpage/bookingpage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
+import { FirststepComponent } from './auth/firststep/firststep.component';
+import { RestuarantComponent } from './restuarant/restuarant.component';
 const routes: Routes = [
   {path:'', component:HomepageComponent},
   {path:'rooms', component:RoompageComponent},
@@ -16,8 +18,9 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'booking',component:BookingpageComponent},
   {path: 'admin', component:AdminpageComponent},
-  {path:'adminlist', component:AdminlistComponent}
-  
+  {path:'adminlist', component:AdminlistComponent},
+  {path:'firststep', component:FirststepComponent},
+  {path:'restuarant', component:RestuarantComponent},
 
 ];
 

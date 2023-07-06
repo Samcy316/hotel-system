@@ -8,10 +8,13 @@ export class UserRegistrationService {
 
   constructor( private http:HttpClient ) { }
   createHost(adminDto:any): Observable<any>{
-    return this.http.post('https://hotel-ipd6.onrender.com/admin/create_account',adminDto);
+    return this.http.post('http://localhost:3000/personalDetail',adminDto);
   }
   login(loginObj:any){
-    return this.http.post<any>('https://hotel-app-7pcg.onrender.com/user/create',loginObj)
+    return this.http.post<any>('http://localhost:3000/login',loginObj)
+  }
+  first(loginObj:any){
+    return this.http.post('http://localhost:3000/createaccount', loginObj)
   }
 
 }

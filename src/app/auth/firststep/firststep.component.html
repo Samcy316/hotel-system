@@ -4,30 +4,39 @@
            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
                 <div class="panel border bg-white">
                    <div class="panel-heading">
-                    <h3 class="pt-3 font-weight-bold">Login</h3>
+                    <h3 class="pt-3 font-weight-bold">Create Account</h3>
                    </div> 
                    <div class="panel-body p-3">
-                    <form [formGroup]="loginHost">
+                    <form [formGroup]="firstHost">
                         <div class="form-group pt-3">
                             <div class="input-field">
                                 <span class="fa fa-user p-2"></span>
                                 <input type="text" placeholder="username" formControlName="username">
-                                <small *ngIf="loginHost.controls['username'].dirty && loginHost.hasError('required', 'username')" class="text-danger">*filled is required</small>
+                                <small *ngIf="firstHost.controls['username'].dirty && firstHost.hasError('required', 'username')" class="text-danger">*filled is required</small>
                             </div>
                         </div>
+
+                        <div class="form-group pt-3">
+                            <div class="input-field">
+                                <span class="fa fa-user p-2"></span>
+                                <input type="text" placeholder="email" formControlName="email">
+                                <small *ngIf="firstHost.controls['email'].dirty && firstHost.hasError('required', 'email')" class="text-danger">*filled is required</small>
+                            </div>
+                        </div>
+
                         <div class="form-group pt-3">
                             <div class="input-field">
                                 <span class="fa fa-lock p-2"></span>
                                 <input [type]="type" placeholder="password" formControlName="password">
                                 <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
-                                <small *ngIf="loginHost.controls['password'].dirty && loginHost.hasError('required', 'password')" class="text-danger">*filled is required</small>
+                                <small *ngIf="firstHost.controls['password'].dirty && firstHost.hasError('required', 'password')" class="text-danger">*filled is required</small>
                             </div>
                         </div>
                         <div class="form-inline fr mt-4">
-                          <a href="" id="forget" class="font-weight-bold">forget password?</a>
+                          <!-- <a href="" id="forget" class="font-weight-bold">forget password?</a> -->
                         </div>
-                        <button [disabled]="loginHost.invalid" type="button" (click)="loginData()" class="btn btn-primary btn-block mt-4 w-100">Login</button>
-                        <div class="text-center pt-4 tex-muted">Don't have account? <a id="forget" routerLink="/signup">Sign Up</a></div>
+                        <button [disabled]="firstHost.invalid" type="button"(click)="firstData()" class="btn btn-primary btn-block mt-4 w-100">next</button>
+                        <!-- <div class="text-center pt-4 tex-muted">Don't have account? <a id="forget" routerLink="/signup">Sign Up</a></div> -->
                     </form>
                    </div>
                    <div class="mx-3 my-2 py-2 bordert">

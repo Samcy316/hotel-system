@@ -1,6 +1,7 @@
 import { FileHandle } from "./file-handle.modal";
 
 export interface selfOnboarding{
+    id:number,
     name:string,
     location: string,
     description: string,
@@ -9,4 +10,5 @@ export interface selfOnboarding{
     rooms_available:number,
     place:string,
     hotelImages:FileHandle[],
+    rating:number,
 }

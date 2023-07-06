@@ -16,6 +16,15 @@ import { SignupComponent } from './auth/signup/signup.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FirststepComponent } from './auth/firststep/firststep.component';
+import { RestuarantComponent } from './restuarant/restuarant.component';
+import { ShowHotelImagesDialogComponent } from './show-hotel-images-dialog/show-hotel-images-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +37,9 @@ import { AdminlistComponent } from './adminlist/adminlist.component';
     SignupComponent,
     AdminpageComponent,
     AdminlistComponent,
+    FirststepComponent,
+    RestuarantComponent,
+    ShowHotelImagesDialogComponent,
     
   
   ],
@@ -40,6 +52,15 @@ import { AdminlistComponent } from './adminlist/adminlist.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatRadioModule,
+    MatGridListModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    
+
+    
+    
 
   ],
   providers: [UserRegistrationService],

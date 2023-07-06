@@ -20,11 +20,10 @@ export class SignupComponent implements OnInit{
 
   ngOnInit(): void {
     this.signupHost=this.formBuilder.group({
-      firstname:['',Validators.required],
-      lastname: ['', Validators.required],
-      email:['',[Validators.email]],
-      username:['',Validators.required],
-      password:['', [Validators.minLength(6)]]
+      first_name:['',Validators.required],
+      last_name: ['', Validators.required],
+      alt_email:['',[Validators.email]],
+      phone_no:['', [Validators.minLength(10)]]
     })
     
   }
@@ -35,7 +34,7 @@ export class SignupComponent implements OnInit{
       next:(res)=>{
         alert("sucessfully signed Up")
         this.signupHost.reset();
-        this.router.navigate(['login']);
+        this.router.navigate(['adminlist']);
         console.log(this.signupHost.value)
       },
       error:(err)=>{

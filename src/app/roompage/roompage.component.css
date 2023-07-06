@@ -82,6 +82,7 @@
     
     
     
+    
     width: 100px;
     border-radius: 10px;
 }
@@ -181,4 +182,7 @@
 }
 .news{
     background-color: rgba(7, 7, 76, 0.789);
+}
+.bord{
+    border-radius: 20px;
 }

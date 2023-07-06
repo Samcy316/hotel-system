@@ -14,6 +14,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AdminlistComponent implements OnInit{
   addhotel: selfOnboarding ={
+    id:0,
     name: "",
     location: "",
     description: "",
@@ -22,6 +23,7 @@ export class AdminlistComponent implements OnInit{
     rooms_available:0,
     place:"",
     hotelImages:[],
+    rating:0,
   }
 
   constructor(private addhotelservice:AddhotelService, private router:Router,
@@ -37,7 +39,9 @@ export class AdminlistComponent implements OnInit{
     this.addhotelservice.addHotel1(hotelFormData).subscribe({
       next:(res)=>{
         alert("add successfull")
+        this.router.navigate(['admin']);
         addhotelForm.reset();
+        this.addhotel.hotelImages=[];
         
         
       },
@@ -78,6 +82,9 @@ export class AdminlistComponent implements OnInit{
      this.addhotel.hotelImages.push(fileHandle);
 
     }
+  }
+  removeImage(i: number){
+    this.addhotel.hotelImages.splice(i, 1);
   }
 
 }

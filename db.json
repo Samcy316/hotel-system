@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "createaccount": {
+    "username": "samcy",
+    "email": "samsonkamau316@gmail.com",
+    "password": "syio9uytrew2345678"
+  },
+  "personalDetail": {
+    "first_name": "ertyuio",
+    "last_name": "345678op",
+    "alt_email": "samsonkamau316@gmail.com",
+    "phone_no": "234567890-"
+  },
+  "hoteldetails": {
+    "location": "serena",
+    "description": "samcy good hotel",
+    "pricing": 200000,
+    "no_of_beds": 2,
+    "rooms_available": 45,
+    "place": "kilimani",
+    "rating": 3,
+    "images": []
+  },
+  "login": {
+    "username": "samcy",
+    "password": "samcy123"
+  }
+}

@@ -341,18 +341,18 @@
     <div class="container">
         <span class="pb-5 mt-3 font-weight-bold text-danger">pick a vibe and explore the top destinations in Kenya</span>
 
-        <div class="row d-flex justify-center">
+        <div class="row d-flex bg-dark container justify-center bord">
             <div class="col">
                 <div class="btn-group d-flex justify-center">
-                    <div class="btn btn button1"
+                    <div class="btn btn-botton button1" [style.background-color]="toggle ? 'green' : 'red'" (click)="enableDisableRule()"
                         (click)="showDiv.previous = !showDiv.previous;showDiv.current = false;showDiv.next = false ">
                         Beach
                     </div>
-                    <div class="btn btn-outline button1"
+                    <div class="btn btn-button button1" [style.background-color]="toggle ? 'green' : 'yellow'" (click)="enableDisableRule()" 
                         (click)="showDiv.current = !showDiv.current;showDiv.previous = false;showDiv.next = false">
                         nature
                     </div>
-                    <div class="btn button1"
+                    <div class="btn btn-botton button1" [style.background-color]="toggle ? 'green' : 'blue'" (click)="enableDisableRule()"
                         (click)="showDiv.next = !showDiv.next;showDiv.previous = false;showDiv.current = false">
                         romance
                     </div>
