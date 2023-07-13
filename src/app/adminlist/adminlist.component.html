@@ -131,22 +131,27 @@
                     </div>
                 </form>
             </div>
+
             <div class="col col-4">
-                <div>
-                    <input type="file" multiple value="Select" #selectFile (change)="onFileSelected($event)">
-                </div>
-                <div class="mt-5">
-                    <div class="row">
-                       <mat-grid-list cols="4" rowHeight="1:1">
-                        <mat-grid-tile *ngFor="let file of addhotel.hotelImages; let i = index">
-                            <div style="position: relative">
-                                <span class="btn-remove-image" (click)="removeImage(i)">x</span>
-                                <img [src]="file.url" width="90px" height="90px">
-                            </div>
-                        </mat-grid-tile>
-                       </mat-grid-list> 
+                
+                    <div>
+                        <input type="file" multiple value="Select" #selectFile (change)="onFileSelected($event)">
                     </div>
-                </div>
+
+                    <div class="mt-5">
+                        <div class="row container-sm">
+                            <mat-grid-list cols="4" rowHeight="1:1">
+                                <mat-grid-tile *ngFor="let file of addhotel.hotelImages; let i = index">
+                                    <div style="position: relative">
+                                        <span class="btn-remove-image" (click)="removeImage(i)">x</span>
+                                        <img [src]="file.url" width="90px" height="90px">
+                                    </div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </div>
+                    </div>
+                
+
 
             </div>
         </div>

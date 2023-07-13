@@ -1,0 +1,89 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Personal Details</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUser">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="FirstName" formControlName="first_name">
+                                    <small
+                                        *ngIf="signUser.controls['first_name'].dirty && signUser.hasError('required', 'first_name')"
+                                        class="text-danger">*filled is required</small>
+
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="LastName" formControlName="last_name">
+                                    <small
+                                        *ngIf="signUser.controls['last_name'].dirty && signUser.hasError('required', 'last_name')"
+                                        class="text-danger">*filled is required</small>
+
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="phone no" formControlName="phone_no">
+                                    <small
+                                        *ngIf="signUser.controls['phone_no'].dirty && signUser.hasError('required', 'phone_no')"
+                                        class="text-danger">*filled is required</small>
+
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-address-book p-2"></span>
+                                    <input type="email" placeholder="email" formControlName="alt_email">
+                                    <small
+                                        *ngIf="signUser.controls['alt_email'].dirty && signUser.hasError('required', 'alt_email')"
+                                        class="text-danger">*filled is required</small>
+
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                            <div class="input-field">
+                                <span class="fa fa-lock p-2"></span>
+                                <input [type]="type" placeholder="password" formControlName="password">
+                                <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                            </div>
+                        </div>    
+                            <div class="row">
+                                <div class="col-6">
+                                    <button  type="button" routerLink="/firststep"
+                                        class="btn btn-primary btn-block mt-4 w-100">Back</button>
+                                </div>
+                                <div class="col-6">
+                                    <button [disabled]="signUser.invalid" type="button" (click)="saveData()"
+                                        class="btn btn-primary btn-block mt-4 w-100">Next</button>
+
+                                </div>
+                            </div>
+                            <div class="text-center pt-4 text-muted"> have account? <a id="forget" routerLink="/login">Login</a></div>
+                        </form>
+                    </div>
+                    <div class="mx-3 my-2 py-2 bordert">
+                        <div class="text-center py-3 bordert1">
+                            <a href="https://www.facebook.com" target="_blank" class="px-2"><img
+                                    src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-icon-png-images-icons-and-png-backgrounds-1.png"
+                                    alt=""></a>
+                            <a href="https://www.google.com" target="_blank" class="px-2"><img
+                                    src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                                    alt=""></a>
+                            <a href="https://www.github.com" target="_blank" class="px-2"><img
+                                    src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

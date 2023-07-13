@@ -17,26 +17,17 @@
     "name": "typicode"
   },
   "createaccount": {
-    "username": "samcy",
+    "username": "beacky",
     "email": "samsonkamau316@gmail.com",
-    "password": "syio9uytrew2345678"
+    "password": "sdghjklkjhgfdtyuio"
   },
   "personalDetail": {
-    "first_name": "ertyuio",
-    "last_name": "345678op",
+    "first_name": "beacky",
+    "last_name": "kamau",
     "alt_email": "samsonkamau316@gmail.com",
-    "phone_no": "234567890-"
+    "phone_no": "0790687949"
   },
-  "hoteldetails": {
-    "location": "serena",
-    "description": "samcy good hotel",
-    "pricing": 200000,
-    "no_of_beds": 2,
-    "rooms_available": 45,
-    "place": "kilimani",
-    "rating": 3,
-    "images": []
-  },
+  "hoteldetails": {},
   "login": {
     "username": "samcy",
     "password": "samcy123"

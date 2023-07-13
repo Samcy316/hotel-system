@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-roompage',
@@ -8,15 +9,22 @@ import { Component } from '@angular/core';
 export class RoompageComponent {
   title = 'testing-app';
   showDiv = {
-    previous : true,
-    current : false,
-    next : false
+    previous: false,
+    current: true,
+    next: false
   }
   toggle = true;
-status = 'Enable'; 
+  status = 'Enable';
 
-enableDisableRule() {
+  constructor(private router: Router){
+
+  }
+
+  enableDisableRule() {
     this.toggle = !this.toggle;
     this.status = this.toggle ? 'Enable' : 'Disable';
-}
+  }
+  showRooms() {
+    this.router.navigateByUrl(`/listing/${1}`)
+  }
 }

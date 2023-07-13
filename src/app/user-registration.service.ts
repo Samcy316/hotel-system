@@ -11,10 +11,13 @@ export class UserRegistrationService {
     return this.http.post('http://localhost:3000/personalDetail',adminDto);
   }
   login(loginObj:any){
-    return this.http.post<any>('http://localhost:3000/login',loginObj)
+    return this.http.post<any>('http://localhost:3000/login',loginObj);
   }
   first(loginObj:any){
-    return this.http.post('http://localhost:3000/createaccount', loginObj)
+    return this.http.post('http://localhost:3000/createaccount', loginObj);
+  }
+  createUser(adminDto:any): Observable<any>{
+    return this.http.post('http://localhost:3000/personalDetail',adminDto);
   }
 
 }

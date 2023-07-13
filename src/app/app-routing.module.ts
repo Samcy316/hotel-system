@@ -10,10 +10,11 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
 import { FirststepComponent } from './auth/firststep/firststep.component';
 import { RestuarantComponent } from './restuarant/restuarant.component';
+import { SignComponent } from './auth/sign/sign.component';
 const routes: Routes = [
   {path:'', component:HomepageComponent},
   {path:'rooms', component:RoompageComponent},
-  {path:'listing', component:ListingComponent},
+  {path:'listing/:id', component:ListingComponent},
   {path:'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'booking',component:BookingpageComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'adminlist', component:AdminlistComponent},
   {path:'firststep', component:FirststepComponent},
   {path:'restuarant', component:RestuarantComponent},
+  {path:'signuser', component:SignComponent}
 
 ];
 

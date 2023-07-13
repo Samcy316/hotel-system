@@ -24,6 +24,13 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FirststepComponent } from './auth/firststep/firststep.component';
 import { RestuarantComponent } from './restuarant/restuarant.component';
 import { ShowHotelImagesDialogComponent } from './show-hotel-images-dialog/show-hotel-images-dialog.component';
+import { SignComponent } from './auth/sign/sign.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 
 @NgModule({
@@ -40,6 +47,7 @@ import { ShowHotelImagesDialogComponent } from './show-hotel-images-dialog/show-
     FirststepComponent,
     RestuarantComponent,
     ShowHotelImagesDialogComponent,
+    SignComponent,
     
   
   ],
@@ -57,6 +65,12 @@ import { ShowHotelImagesDialogComponent } from './show-hotel-images-dialog/show-
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
     
 
     

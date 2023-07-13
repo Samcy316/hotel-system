@@ -22,10 +22,11 @@
 .content2{
     
     color: black;
-    display: block;
+    display: flex;
     justify-content: center;
     padding-top: 50px;
     font-size: xx-large;
+    flex-wrap: wrap;
 }
  .content3{
     
@@ -67,6 +68,7 @@
     position: absolute;
     background-color: red;
     color: white;
+    opacity: 0.6;
 }
 .trend{
     margin-left: 40px;
@@ -185,4 +187,7 @@
 }
 .bord{
     border-radius: 20px;
+}
+.cardi{
+    overflow-x: scroll;
 }
