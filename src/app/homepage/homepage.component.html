@@ -95,15 +95,9 @@
                                 <a href="index.html" class="nav-item nav-link active text-white">Home</a>
                                 <a href="#about" class="nav-item nav-link text-white">About</a>
                                 <a href="#service" class="nav-item nav-link text-white">Services</a>
-                                <a routerLink="rooms" href="#" routerLink="rooms" class="nav-item nav-link text-white">Rooms</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking.html" class="dropdown-item text-white ">Booking</a>
-                                        <a href="#team" class="dropdown-item text-white">Our Team</a>
-                                        <a href="#testimonial" class="dropdown-item text-white">Testimonial</a>
-                                    </div>
-                                </div>
+                                <a routerLink="rooms" href="#" routerLink="rooms"
+                                    class="nav-item nav-link text-white">Rooms</a>
+                                <a href="#" class="nav-item nav-link text-white" routerLink="booking">Book</a>
                                 <a href="#contact" class="nav-item nav-link text-white">Contact</a>
                             </div>
                             <!-- reactive forms -->
@@ -111,8 +105,8 @@
                             <div class="container d-flex justify-content-end">
                                 <button type="button" class="btn btn-link " routerLink="/firststep">
                                     Host Hotel
-                            </button>
-                            </div>        
+                                </button>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -153,9 +147,12 @@
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Cheap Hotel</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                            dolore erat amet</p>
+                        <p class="mb-4">Discover affordable comfort and convenience at our budget-friendly hotel. We are
+                            delighted to have you visit our website.
+                            At Cheap Hotel, we understand that your travel budget matters, and we believe
+                            that everyone deserves a comfortable and enjoyable stay without breaking the bank. Our
+                            mission is to provide you with a warm and welcoming environment that offers exceptional
+                            value for your money.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
@@ -246,12 +243,13 @@
                                         Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                    lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Our Junior Suite offers a comfortable and stylish
+                                    accommodation option with modern amenities for a relaxing stay.</p>
                                 <div class="d-flex justify-content-between">
                                     <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
                                         Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" routerLink="rooms" href="">Book
+                                        Now</a>
                                 </div>
                             </div>
                         </div>
@@ -282,12 +280,13 @@
                                         Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                    lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Indulge in luxury and sophistication with our Executive Suite,
+                                    featuring spacious living areas and exclusive perks.</p>
                                 <div class="d-flex justify-content-between">
                                     <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
                                         Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#" routerLink="rooms">Book
+                                        Now</a>
                                 </div>
                             </div>
                         </div>
@@ -318,12 +317,13 @@
                                         Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                    lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Experience ultimate comfort and elegance in our Super Deluxe
+                                    room, with generous space and exquisite decor.</p>
                                 <div class="d-flex justify-content-between">
                                     <a routerLink="rooms" class="btn btn-sm btn-primary rounded py-2 px-4" href="">View
                                         Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#" routerLink="rooms">Book
+                                        Now</a>
                                 </div>
                             </div>
                         </div>
@@ -352,8 +352,7 @@
                     <div class="video video1">
                         <h1 class="video2">Click to View Sample of Our Hotel</h1>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/watch"
-                            data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/watch" data-bs-target="#videoModal">
                             <span></span>
 
                         </button>
@@ -372,8 +371,11 @@
                     <div class="modal-body">
                         <!-- 16:9 aspect ratio -->
                         <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" width="596" height="409" src="https://www.youtube.com/embed/Z4N8lzKNfy4?list=RDEMV6Vh7d9Bv-U0JmShrvzdFQ" title="Lil Durk - All My Life ft. J. Cole (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" id="video" allowfullscreen
-                                allowscriptaccess="always" allow="autoplay"></iframe>
+                            <iframe class="embed-responsive-item" width="596" height="409"
+                                src="https://www.youtube.com/embed/Z4N8lzKNfy4?list=RDEMV6Vh7d9Bv-U0JmShrvzdFQ"
+                                title="Lil Durk - All My Life ft. J. Cole (Official Video)" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
@@ -390,8 +392,8 @@
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4 ">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.1s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" style="background-color: black; color: white;" data-wow-delay="0.1s">
+                        <a class="service-item rounded serv bg-white" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
                                     class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
@@ -399,12 +401,13 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Rooms & Appartment</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our rooms and apartments offer a comfortable and inviting space,
+                                perfect for both short and long stays, providing all the amenities you need for a
+                                memorable experience.</p>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.2s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" style="background-color: black; color: white;" data-wow-delay="0.2s">
+                        <a class="service-item rounded serv bg-white" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
                                     class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
@@ -412,12 +415,13 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Indulge in a culinary journey at our restaurant, where our skilled
+                                chefs craft delicious and diverse dishes using fresh, locally sourced ingredients,
+                                ensuring a delightful dining experience for all our guests</p>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.3s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" style="background-color: black; color: white;" data-wow-delay="0.3s">
+                        <a class="service-item rounded serv bg-white" routerLink="rooms" href="#">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div
                                     class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
@@ -425,47 +429,9 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Spa & Fitness</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.4s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
-                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Sports & Gaming</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.5s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
-                                    <i class="fa fa-glass-cheers  fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Event & Party</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp mb-2" data-wow-delay="0.6s">
-                        <a class="service-item rounded serv" routerLink="rooms" href="#">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div
-                                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center bg-dark">
-                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">GYM & Yoga</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                                sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Rejuvenate your mind, body, and soul at our spa and fitness
+                                center, where you can indulge in relaxing treatments, invigorating workouts, and
+                                holistic wellness programs designed to leave you feeling refreshed and revitalized.</p>
                         </a>
                     </div>
                 </div>
@@ -481,41 +447,38 @@
                 <div class="owl-carousel testimonial-carousel py-5 d-flex justify-content-center">
                     <div
                         class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
-                            diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>Outstanding service! The staff went above and beyond to make our stay memorable.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/testimonial-1.jpg"
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test4.jpeg"
                                 style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Stellah Mbithe</h6>
+                                <small>Laywer</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div
                         class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
-                            diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>Amazing experience! The hotel exceeded my expectations in every way.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/testimonial-2.jpg"
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test2.jpeg"
                                 style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Samcy kamau</h6>
+                                <small>Bussiness Man</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden py-5 col-5 mx-2">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
-                            diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden mb-2 py-5 col-5 mx-2">
+                        <p>Unforgettable stay! The hotel's attention to detail and exceptional amenities made it a truly remarkable experience</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/testimonial-3.jpg"
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test3.jpg"
                                 style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Vanessa Wambui</h6>
+                                <small>Auditor</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
@@ -537,7 +500,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assets/images/team-1.jpg" alt="">
+                                <img class="img-fluid" src="assets/images/test1.jpeg" alt="">
                                 <div
                                     class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
@@ -549,15 +512,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0">Roy J</h5>
+                                <small>Backend Developer</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assets/images/team-2.jpg" alt="">
+                                <img class="img-fluid" src="assets/images/test2.jpeg" alt="">
                                 <div
                                     class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
@@ -569,15 +532,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0">Samcy K</h5>
+                                <small>Frontend Developer</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assets/images/team-3.jpg" alt="">
+                                <img class="img-fluid" src="assets/images/test5.jpeg" alt="">
                                 <div
                                     class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
@@ -589,15 +552,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0">Mugambi G</h5>
+                                <small>UI/UX Design</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assets/images/team-4.jpg" alt="">
+                                <img class="img-fluid" src="assets/images/test6.jpeg" alt="">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex "
                                     style="align-items:center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i
@@ -609,8 +572,8 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0">Karu K</h5>
+                                <small>Customer Experience</small>
                             </div>
                         </div>
                     </div>
@@ -672,19 +635,19 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="#about">About Us</a>
+                                <a class="btn btn-link" href="#contact">Contact Us</a>
                                 <a class="btn btn-link" href="">Privacy Policy</a>
                                 <a class="btn btn-link" href="">Terms & Condition</a>
                                 <a class="btn btn-link" href="">Support</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Spa & Fitness</a>
-                                <a class="btn btn-link" href="">Sports & Gaming</a>
-                                <a class="btn btn-link" href="">Event & Party</a>
-                                <a class="btn btn-link" href="">GYM & Yoga</a>
+                                <a class="btn btn-link" href="" routerLink="rooms">Food & Restaurant</a>
+                                <a class="btn btn-link" href="" routerLink="rooms">Spa & Fitness</a>
+                                <a class="btn btn-link" href="" routerLink="rooms">Sports & Gaming</a>
+                                <a class="btn btn-link" href="" routerLink="rooms">Event & Party</a>
+                                <a class="btn btn-link" href="" routerLink="rooms">GYM & Yoga</a>
                             </div>
                         </div>
                     </div>
@@ -694,10 +657,9 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="#">Cheap Hotel</a>, All Right Reserved.
 
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -718,7 +680,7 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-  
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 

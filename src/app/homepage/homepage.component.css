@@ -502,12 +502,12 @@
 }
 .video1{
     height: 100vh;
-    background: linear-gradient(to top, #bcbcf5 30%, #05a1f5 90%) no-repeat;
+    background-color: white;
 }
 .video2{
     display: flex;
     justify-content: center;
-    color:rgb(244, 206, 206);
+    color:#000000;
     font-weight: 1000;
     padding-top: 10px;
 }

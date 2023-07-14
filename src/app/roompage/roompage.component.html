@@ -85,16 +85,7 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a routerLink="/roompage-component" routerLinkActive="active" ariaCurrentWhenActive="page"
-                                class="nav-item nav-link">Rooms</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="booking.html" class="dropdown-item">Booking</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                </div>
-                            </div>
+                            <a href="#" class="nav-link nav-item ">Pages</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="text-center">
@@ -109,12 +100,12 @@
     <!-- Header End -->
     <div class="content3 container-fluid">
         <div class="container  content2">Find Cheap Hotel in Kenya</div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms()">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/nairobib2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Nairobi</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Nairobi.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -124,7 +115,7 @@
                 <img src="assets/images/kilifib2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Kilifi</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Kilifi.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -134,7 +125,7 @@
                 <img src="assets/images/watamub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Lamu</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Lamu.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -144,7 +135,7 @@
                 <img src="assets/images/malindib1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Malindi</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Malindi.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -154,7 +145,7 @@
                 <img src="assets/images/watamub1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Watamu</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Watamu.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -164,7 +155,7 @@
                 <img src="assets/images/nakurub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Nakuru</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Nakuru.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -174,7 +165,7 @@
                 <img src="assets/images/watamub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Diani</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Diani.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -184,7 +175,7 @@
                 <img src="assets/images/kisumub.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">kisumu</h2>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Explore more to see more Hotels in Kisumu.</p>
                     <a href="#" class="btn btn-primary">Explore More</a>
                 </div>
             </div>
@@ -203,7 +194,7 @@
         <div class="contnent4">
             <div class="card" style="width:36rem;">
                 <a href=""><img 
-                        src="assets/images/nairobib1.jpg" class="card-img-top" alt="..."></a>
+                        src="assets/images/nairobib1.jpg" class="card-img-top" alt="..."  (click)="showRooms()"></a>
                 <div class="trend2">Nairobi
                     <br>below ksh2000
                 </div>
@@ -226,7 +217,7 @@
                 </div>
             </div>
         </div>
-        <div class="contnent4" (click)="showRooms()">
+        <div class="contnent4">
             <div class="card" style="width:18rem;">
                 <a><img src="assets/images/nakurub1.jpg" class="card-img-top" alt="..."></a>
                 <div class="trend2">Nakuru
@@ -257,7 +248,7 @@
     <div class="container">
         <span class="pb-5 mt-3 font-weight-bold text-danger">pick a vibe and explore the top destinations in Kenya</span>
 
-        <div class="row d-flex bg-dark container justify-center bord">
+        <div class="row d-flex bg-dark container bord">
             <div class="col">
                 <div class="btn-group d-flex justify-center">
                     <div class="btn btn-botton button1" [style.background-color]="toggle ? 'green' : 'red'" (click)="enableDisableRule()"
@@ -631,19 +622,19 @@
                     <div class="row gy-5 g-4">
                         <div class="col-md-6">
                             <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                            <a class="btn btn-link" href="">About Us</a>
-                            <a class="btn btn-link" href="">Contact Us</a>
+                            <a class="btn btn-link" href="#about" routerLink="">About Us</a>
+                            <a class="btn btn-link" href="#contact" routerLink="">Contact Us</a>
                             <a class="btn btn-link" href="">Privacy Policy</a>
                             <a class="btn btn-link" href="">Terms & Condition</a>
                             <a class="btn btn-link" href="">Support</a>
                         </div>
                         <div class="col-md-6">
                             <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                            <a class="btn btn-link" href="">Food & Restaurant</a>
-                            <a class="btn btn-link" href="">Spa & Fitness</a>
-                            <a class="btn btn-link" href="">Sports & Gaming</a>
-                            <a class="btn btn-link" href="">Event & Party</a>
-                            <a class="btn btn-link" href="">GYM & Yoga</a>
+                            <a class="btn btn-link" href="/">Food & Restaurant</a>
+                            <a class="btn btn-link" href="/">Spa & Fitness</a>
+                            <a class="btn btn-link" href="/">Sports & Gaming</a>
+                            <a class="btn btn-link" href="/">Event & Party</a>
+                            <a class="btn btn-link" href="/">GYM & Yoga</a>
                         </div>
                     </div>
                 </div>
@@ -653,10 +644,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        &copy; <a class="border-bottom" href="#">Cheap hotel</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
