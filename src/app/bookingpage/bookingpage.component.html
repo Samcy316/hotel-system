@@ -23,135 +23,146 @@
                 <h1 style="font-size: x-large; font-weight: 600; "> Hotel Booking</h1>
                 <p>Experience Something New Every Moment</p>
             </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>Name</b></small>
+            <form action="submit" [formGroup]="bookingUser">
+                <div class="row">
+                    <div class="col col-4 mt-2">
+                        <div class="text">
+                            <small><b>Name</b></small>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-3 mt-2">
-                    <div class="input-field">
-                        <span class="icon1 fa fa-user"></span>
-                        <input type="text" class="form-control" placeholder="firstname" name="name">
+                    <div class="col col-3 mt-2">
+                        <div class="input-field">
+                            <span class="icon1 fa fa-user"></span>
+                            <input type="text" class="form-control" placeholder="firstname" formControlName="firstname">
+                            <small *ngIf="bookingUser.controls['firstname'].dirty && bookingUser.hasError('required','firstname')" class="text-danger">*filled required</small>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-3 mt-2">
-                    <div class="input-field">
-                        <span class="icon1 fa fa-user"></span>
-                        <input type="text" class="form-control" placeholder="lastname" name="name" >
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>Email</b></small>
-                    </div>
-                </div>
-                <div class="col col-6 mt-2">
-                    <div class="input-field">
-                        <span class="icon1 fa fa-address-book"></span>
-                        <input type="text" class="form-control" placeholder="email" name="email">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>Room Type</b></small>
-                    </div>
-                </div>
-                <div class="col col-6 mt-2">
-                    <span class="icon1 fa fa-home"></span>
-                    <div class="input-group mb-3">
-                        <select class="form-select" id="inputGroupSelect01">
-                          <option value="1">Junior Suite</option>
-                          <option value="2">Executive Suite</option>
-                          <option value="3">Super Deluxe</option>
-                        </select>
-                      </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>No Guests</b></small>
-                    </div>
-                </div>
-                <div class="col col-6 mt-2">
-                    <div class="input-field">
-                        <span class="icon1 fa fa-users"></span>
-                        <input type="number" class="form-control" placeholder="no of guest" name="email">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>Special Request</b></small>
-                    </div>
-                </div>
-                <div class="col col-6 mt-2">
-                    <div class="input-field">
-                        <small>request</small>
-                        <textarea class="form-control" rows="5" id="comment" name="description"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-4 mt-2">
-                    <div class="text">
-                        <small><b>Arrival Date</b></small>
-                    </div>
-                </div>
-                <div class="col col-3 mt-2">
-                    <div class="input-field">
-                        <span class="icon1 fa fa-car"></span>
-                        <mat-form-field color="accent">
-                            <mat-label>arrival</mat-label>
-                            <input matInput [matDatepicker]="picker1">
-                            <mat-hint>MM/DD/YYYY</mat-hint>
-                            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
-                            <mat-datepicker #picker1></mat-datepicker>
-                        </mat-form-field>
+                    <div class="col col-3 mt-2">
+                        <div class="input-field">
+                            <span class="icon1 fa fa-user"></span>
+                            <input type="text" class="form-control" placeholder="lastname" formControlName="lastname">
+                            <small *ngIf="bookingUser.controls['lastname'].dirty && bookingUser.hasError('required','lastname')" class="text-danger">*filled required</small>
+
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-4 mt-2">
                         <div class="text">
-                            <small><b>Departure Date</b></small>
+                            <small><b>Email</b></small>
+                        </div>
+                    </div>
+                    <div class="col col-6 mt-2">
+                        <div class="input-field">
+                            <span class="icon1 fa fa-address-book"></span>
+                            <input type="text" class="form-control" placeholder="email" formControlName="email">
+                            <small *ngIf="bookingUser.controls['email'].dirty && bookingUser.hasError('required','email')" class="text-danger">*filled required</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4 mt-2">
+                        <div class="text">
+                            <small><b>Room Type</b></small>
+                        </div>
+                    </div>
+                    <div class="col col-6 mt-2">
+                        <span class="icon1 fa fa-home"></span>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01" formControlName="room_type">
+                                <option value="1">Junior Suite</option>
+                                <option value="2">Executive Suite</option>
+                                <option value="3">Super Deluxe</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4 mt-2">
+                        <div class="text">
+                            <small><b>No Guests</b></small>
+                        </div>
+                    </div>
+                    <div class="col col-6 mt-2">
+                        <div class="input-field">
+                            <span class="icon1 fa fa-users"></span>
+                            <input type="number" class="form-control" placeholder="no of guest" formControlName="no_guest">
+                            <small *ngIf="bookingUser.controls['no_guest'].dirty && bookingUser.hasError('required','no_guest')" class="text-danger">*filled required</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4 mt-2">
+                        <div class="text">
+                            <small><b>Special Request</b></small>
+                        </div>
+                    </div>
+                    <div class="col col-6 mt-2">
+                        <div class="input-field">
+                            <small>request</small>
+                            <textarea class="form-control" rows="5" id="comment" formControlName="special_request"></textarea>
+                            <small *ngIf="bookingUser.controls['special_request'].dirty && bookingUser.hasError('required','special_request')" class="text-danger">*filled required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4 mt-2">
+                        <div class="text">
+                            <small><b>Arrival Date</b></small>
                         </div>
                     </div>
                     <div class="col col-3 mt-2">
                         <div class="input-field">
                             <span class="icon1 fa fa-car"></span>
                             <mat-form-field color="accent">
-                                <mat-label>departure</mat-label>
-                                <input matInput [matDatepicker]="picker2">
+                                <mat-label>arrival</mat-label>
+                                <input matInput [matDatepicker]="picker1" formControlName="arrival">
                                 <mat-hint>MM/DD/YYYY</mat-hint>
-                                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-                                <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
                             </mat-form-field>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col col-4 mt-2">
-                        <div class="text">
-                            <small><b>Card Payment</b></small>
+                    <div class="row">
+                        <div class="col col-4 mt-2">
+                            <div class="text">
+                                <small><b>Departure Date</b></small>
+                            </div>
+                        </div>
+                        <div class="col col-3 mt-2">
+                            <div class="input-field">
+                                <span class="icon1 fa fa-car"></span>
+                                <mat-form-field color="accent">
+                                    <mat-label>departure</mat-label>
+                                    <input matInput [matDatepicker]="picker2" formControlName="departure">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                                </mat-form-field>
+                            </div>
                         </div>
                     </div>
-                    <div class="col col-6 mt-2">
-                        <div class="input-field">
-                            <div class="col-md-5 mb-2">
-                                <button (click)="makePayment(35)" class="btn btn1 btn-block" style="text-align: center;  color:black;">click to pay</button>
-                              </div>
+                    <div class="row">
+                        <div class="col col-4 mt-2">
+                            <div class="text">
+                                <small><b>Card Payment</b></small>
+                            </div>
+                        </div>
+                        <div class="col col-6 mt-2">
+                            <div class="input-field">
+                                <div class="col-md-5 mb-2">
+                                    <button (click)="makePayment(35)" class="btn btn1 btn-block"
+                                        style="text-align: center;  color:black;">click to pay</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="btn2 mt-4">
-                <button mat-raised-button class="card1" style="background-color: rgb(15, 247, 15);">Submit</button>
-            </div>
+                <div class="btn2 mt-4">
+                    <button mat-raised-button class="card1" style="background-color: rgb(15, 247, 15);" (click)="submitBooking()">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
