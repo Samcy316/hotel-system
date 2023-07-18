@@ -6,18 +6,18 @@ import { Observable } from 'rxjs';
 })
 export class UserRegistrationService {
 
-  constructor( private http:HttpClient ) { }
-  createHost(adminDto:any): Observable<any>{
-    return this.http.post('http://localhost:3000/personalDetail',adminDto);
+  constructor(private http: HttpClient) { }
+  createHost(adminDto: any): Observable<any> {
+    return this.http.post('https://hotel-ipd6.onrender.com/admin/add_details', adminDto);
   }
-  login(loginObj:any){
-    return this.http.post<any>('http://localhost:3000/login',loginObj);
+  login(loginObj: any) {
+    return this.http.post<any>('http://localhost:3000/login', loginObj);
   }
-  first(loginObj:any){
-    return this.http.post('http://localhost:3000/createaccount', loginObj);
+  first(loginObj: any) {
+    return this.http.post('https://hotel-ipd6.onrender.com/admin/create_account', loginObj);
   }
-  createUser(adminDto:any): Observable<any>{
-    return this.http.post('http://localhost:3000/personalDetail',adminDto);
+  createUser(adminDto: any): Observable<any> {
+    return this.http.post('http://localhost:3000/personalDetail', adminDto);
   }
 
 }

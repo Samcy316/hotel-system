@@ -31,5 +31,15 @@
   "login": {
     "username": "samcy",
     "password": "samcy123"
+  },
+  "bookingHotel": {
+    "firstname": "victoria",
+    "lastname": "Bahati",
+    "email": "samsonkamau316@gmail.com",
+    "arrival": "2023-07-26T21:00:00.000Z",
+    "departure": "2023-07-27T21:00:00.000Z",
+    "special_request": "Hot baths, No noise",
+    "no_guest": 2,
+    "room_type": "Super Deluxe"
   }
 }

@@ -1,6 +1,8 @@
 import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { hotelBooking } from '../modal/userBooking';
+import { BookingService } from '../services/booking.service';
 
 @Component({
   selector: 'app-bookingpage',
@@ -9,8 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class BookingpageComponent implements OnInit{
   paymentHandler: any = null;
-  constructor(private formBuilder:FormBuilder) {}
+  constructor(private formBuilder:FormBuilder, private service:BookingService) {}
+  hotelBook:hotelBooking[]=[];
   bookingUser!:FormGroup;
+  
 
 
 
@@ -64,7 +68,15 @@ invokeStripe() {
 }
 
 submitBooking(){
-  console.log(this.bookingUser)
+  console.log(this.bookingUser.value)
+  this.service.bookingService(this.bookingUser.value).subscribe({
+    next:(data)=>{console.log("success", data)
+    alert("booking was successful")
+  },
+    error:(error)=>{
+      alert("failed")
+    }
+  })
 
 }
 

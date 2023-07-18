@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "bookingHotel": [],
+  "hoteldetails": [
+    {
+      "id": 1
+    }
+  ],
+  "personalDetail": [
+    {
+      "first_name": "samson",
+      "last_name": "kamau",
+      "alt_email": "samsonkamau316@gmail.com",
+      "phone_no": "0790641259",
+      "id": 1
+    }
+  ],
+  "createaccount": [
+    {
+      "username": "samcy",
+      "email": "samsonkamau316@gmail.com",
+      "password": "Samcy8357",
+      "id": 1
+    }
+  ],
+  "login": []
+}

@@ -31,6 +31,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { BookpageComponent } from './bookpage/bookpage.component';
+import { NavbarComponent } from './sharedComponent/navbar/navbar.component';
+import { FooterComponent } from './sharedComponent/footer/footer.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -50,6 +53,8 @@ import { BookpageComponent } from './bookpage/bookpage.component';
     ShowHotelImagesDialogComponent,
     SignComponent,
     BookpageComponent,
+    NavbarComponent,
+    FooterComponent,
     
   
   ],
@@ -71,7 +76,8 @@ import { BookpageComponent } from './bookpage/bookpage.component';
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCardModule
 
     
 

@@ -9,7 +9,7 @@ export class AddhotelService {
 
   constructor(private http: HttpClient) { }
   public addHotel1(addhotel:FormData){
-    return this.http.post<selfOnboarding>(" http://localhost:3000/hoteldetails", addhotel);
+    return this.http.post<selfOnboarding>("https://hotel-ipd6.onrender.com/admin/host", addhotel);
 
   }
   public getAllHotel1(){
