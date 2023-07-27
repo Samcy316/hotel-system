@@ -12,6 +12,9 @@ export class AddhotelService {
     return this.http.post<selfOnboarding>("https://hotel-ipd6.onrender.com/admin/host", addhotel);
 
   }
+  public addHotel2(obj:any){
+    return this.http.post("url",obj);
+  }
   public getAllHotel1(){
     return this.http.get<selfOnboarding[]>("https://hotel-ipd6.onrender.com/hotels/listing/get_hotel/3");
   }

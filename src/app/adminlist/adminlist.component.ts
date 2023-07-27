@@ -86,5 +86,15 @@ export class AdminlistComponent implements OnInit{
   removeImage(i: number){
     this.addhotel.hotelImages.splice(i, 1);
   }
-
+  finalPush(){
+    this.addhotelservice.addHotel2(null).subscribe({
+      next:(res)=>{
+        alert("add successfull")
+        this.router.navigate(['admin']);
+  },
+  error:(err)=>{
+    alert("error try again")
+  }
+})
+}
 }

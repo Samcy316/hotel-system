@@ -100,83 +100,83 @@
     <!-- Header End -->
     <div class="content3 container-fluid">
         <div class="container  content2">Find Cheap Hotel in Kenya</div>
-        <div class="contnent4" (click)="showRooms()">
+        <div class="contnent4" (click)="showRooms('nairobi')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/nairobib2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Nairobi</h2>
                     <p class="card-text">Explore more to see more Hotels in Nairobi.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('kilifi')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/kilifib2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Kilifi</h2>
                     <p class="card-text">Explore more to see more Hotels in Kilifi.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a  class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('watamu')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/watamub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Lamu</h2>
                     <p class="card-text">Explore more to see more Hotels in Lamu.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a  class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('malindi')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/malindib1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Malindi</h2>
                     <p class="card-text">Explore more to see more Hotels in Malindi.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a  class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('watamu')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/watamub1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Watamu</h2>
                     <p class="card-text">Explore more to see more Hotels in Watamu.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4 ">
+        <div class="contnent4 " (click)="showRooms('nakuru')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/nakurub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Nakuru</h2>
                     <p class="card-text">Explore more to see more Hotels in Nakuru.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a class="btn btn-primary">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('diani')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/watamub2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">Diani</h2>
                     <p class="card-text">Explore more to see more Hotels in Diani.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a class="btn btn-primary mt-auto">Explore More</a>
                 </div>
             </div>
         </div>
-        <div class="contnent4">
+        <div class="contnent4" (click)="showRooms('kisumu')">
             <div class="card" style="width: 18rem;">
                 <img src="assets/images/kisumub.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">kisumu</h2>
                     <p class="card-text">Explore more to see more Hotels in Kisumu.</p>
-                    <a href="#" class="btn btn-primary">Explore More</a>
+                    <a class="btn btn-primary mt-auto">Explore More</a>
                 </div>
             </div>
         </div>
@@ -193,8 +193,8 @@
     <div class="container-fluid content3">
         <div class="contnent4">
             <div class="card" style="width:36rem;">
-                <a href=""><img 
-                        src="assets/images/nairobib1.jpg" class="card-img-top" alt="..."  (click)="showRooms()"></a>
+                <a ><img 
+                        src="assets/images/nairobib1.jpg" class="card-img-top" alt="..."  (click)="showRooms('nairobi')"></a>
                 <div class="trend2">Nairobi
                     <br>below ksh2000
                 </div>
@@ -202,8 +202,8 @@
         </div>
         <div class="contnent4">
             <div class="card"  style="width:36rem;">
-                <a href="" ><img 
-                        src="assets/images/watamub.jpg" class="card-img-top" alt="..."></a>
+                <a ><img 
+                        src="assets/images/watamub.jpg" class="card-img-top" alt="..." (click)="showRooms('watamu')"></a>
                 <div class="trend2">lamu
                     <br>below ksh2000
                 </div>
@@ -211,7 +211,7 @@
         </div>
         <div class="contnent4">
             <div class="card" style="width:18rem;">
-                <a href=""><img src="assets/images/nakurub2.jpg" class="card-img-top" alt="..."></a>
+                <a href=""><img src="assets/images/nakurub2.jpg" class="card-img-top" alt="..." (click)="showRooms('naivasha')"></a>
                 <div class="trend2">Naivasha
                     <br>below ksh2050
                 </div>
@@ -219,7 +219,7 @@
         </div>
         <div class="contnent4">
             <div class="card" style="width:18rem;">
-                <a><img src="assets/images/nakurub1.jpg" class="card-img-top" alt="..."></a>
+                <a><img src="assets/images/nakurub1.jpg" class="card-img-top" alt="..." (click)="showRooms('nakuru')"></a>
                 <div class="trend2">Nakuru
                     <br>below ksh1500
                 </div>
@@ -227,7 +227,7 @@
         </div>
         <div class="contnent4">
             <div class="card" style="width:18rem;">
-                <a href=""><img src="assets/images/mombasab1.jpg" class="card-img-top" alt="..."></a>
+                <a href=""><img src="assets/images/mombasab1.jpg" class="card-img-top" alt="..." (click)="showRooms('mombasa')"></a>
                 <div class="trend2">Mombasa
                     <br>below ksh3000
                 </div>
@@ -235,7 +235,7 @@
         </div>
         <div class="contnent4">
             <div class="card" style="width:18rem;">
-                <a href=""><img src="assets/images/kisumub2.jpg" class="card-img-top" alt="..."></a>
+                <a href=""><img src="assets/images/kisumub2.jpg" class="card-img-top" alt="..." (click)="showRooms('kisumu')"></a>
                 <div class="trend2">Kisumu
                     <br>below ksh2500
                 </div>
@@ -493,7 +493,7 @@
                 
                                                 <div class="col-md-4 mb-3">
                                                     <div class="card">
-                                                        <img class="img-fluid" alt="100%x280" src="assets/images/nature1.jpg">
+                                                        <img class="img-fluid" alt="100%x280" src="assets/images/nature1.jpg" (click)="showRooms('nakuru')">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Nakuru City</h4>
                                                             <p class="card-text">Nakuru Town.</p>
@@ -504,7 +504,7 @@
                                                 </div>
                                                 <div class="col-md-4 mb-3">
                                                     <div class="card">
-                                                        <img class="img-fluid" alt="100%x280" src="assets/images/nature2.jpg">
+                                                        <img class="img-fluid" alt="100%x280" src="assets/images/nature2.jpg" (click)="showRooms('nairobi')">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Nirobi Park</h4>
                                                             <p class="card-text">12km from Nairobi Town.</p>

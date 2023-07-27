@@ -1,33 +1,141 @@
+<div class="out">
 <app-navbar></app-navbar>
+
 <div class="container">
     <span>
-        <h1 class="text-black"><b>Serena Hotel</b></h1>
+        <h1 class="text-black"><b>Serena Hotel</b><br><u>Nairobi</u></h1>
     </span>
 </div>
 <div class="container-xxl">
-    <div class="row">
-        <div class="col-8">
+    <div class="row card2">
+        <div class="col-lg-8 col-md-12">
             <div class="parent">
-                <div class="div1 col-4"><img [src]="files.url" alt=""> </div>
-                <div class="div2 col-4"><img [src]="files.url1" alt=""> </div>
-                <div class="div3 col-4"><img [src]="files.url2" alt=""> </div>
-                <div class="div4 col-4"><img [src]="files.url" alt=""> </div>
+                <div class="div1 col-lg-4 col-md-4" *ngFor="let image of rooms.hotelImagesDto"><img class="image-fluid w-auto" style="height: 180px;" src="{{image.imageUrl}}" alt=""> </div>
+ 
             </div>
         </div>
-        <div class="col-4">
-            <span><h1>samcy</h1></span>
+        <div class="col-4 text-black">
+            <span>
+                <h1>What this place offer</h1>
+            </span>
+            <div class="col-lg-8 col-md-12 m-3">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 offer">
+                        <span [ngStyle]="{ color: breakfaststatus ? 'green' : 'red' }" class="fa fa-cutlery  me-2"></span>
+                        <p>Breakfast</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 offer">
+                        <span [ngStyle]="{ color: wifistatus ? 'green' : 'red' }"class="fa fa-wifi me-2"></span>
+                        <p>WIFI</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 offer">
+                        <span [ngStyle]="{ color: barstatus ? 'green' : 'red' }" class="fa fa-coffee  me-2"></span>
+                        <p>Dedicated workspace</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 offer">
+                        <span [ngStyle]="{ color: barstatus ? 'green' : 'red' }" class="fa fa-bed  me-2"></span>
+                        <p>washing Services</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <span class="fa fa-car  me-2"></span>
+                        <p>Parking Area</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <span [ngStyle]="{ color: swimmingstatus ? 'green' : 'red' }" class="fa fa-bath  me-2"></span>
+                        <p>Pool</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 ">
+                        <span [ngStyle]="{ color: barstatus ? 'green' : 'red' }" class="fa fa-tv  me-2"></span>
+                        <p>TV</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <span [ngStyle]="{ color: fitnessstatus ? 'green' : 'red' }" class="fa fa-bank  me-2"></span>
+                        <p>GYM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-2">
+        <mat-card class="col-lg-6 col-md-6">
+            <mat-card-header class="offer1">
+                <mat-card-actions>
+                    <div class="img1"><img src="assets/images/testimonial-1.jpg" class="img" alt=""></div>
+                </mat-card-actions>
+                <mat-card-title class="text-black">Entire rental unit hosted by Gavin</mat-card-title>
+                <mat-card-subtitle>
+                    <div class="text-black">Contact</div>
+                    <p>Phone: +254790641259. <br> Email:gavin@gmail.com. <br> Address:Nairobi</p>
+                    <div class="pt-2">
+                        <a href="">View other hotel hosted by Gavin</a>
+                    </div>
+                </mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <div class="col-lg-6 col-md-6 card3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Reserve with Us</h5>
+                    <p class="card-text">Experience the epitome of luxury and comfort at our exquisite hotel, <br>where
+                        personalized service and breathtaking amenities await to create unforgettable memories for your
+                        perfect stay.</p>
+                    <a routerLink="/booking" class="btn btn-primary d-flex justify-content-center">Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="testimonial" class="container-xxl testimonial my-5 py-5 bg-black wow zoomIn testimonial1"
+    data-wow-delay="0.1s">
+    <div class="container">
+        <div class="py-5 d-flex justify-content-center offer1">
+            <div
+                class="testimonial-item position-relative bg-white rounded mb-2 py-5 col-lg-4 col-md-6 mx-2 offer1">
+                <p>Outstanding service! The staff went above and beyond to make our stay memorable.</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test4.jpeg"
+                        style="width: 45px; height: 45px;">
+                    <div class="ps-3">
+                        <h6 class="fw-bold mb-1">Stellah Mbithe</h6>
+                        <small>Laywer</small>
+                    </div>
+                </div>
+                <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+            </div>
+            <div
+                class="testimonial-item position-relative bg-white rounded mb-2 py-5 col-lg-3 col-md-6 mx-2 offer1">
+                <p>Amazing experience! The hotel exceeded my expectations in every way.</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test2.jpeg"
+                        style="width: 45px; height: 45px;">
+                    <div class="ps-3">
+                        <h6 class="fw-bold mb-1">Samcy kamau</h6>
+                        <small>Bussiness Man</small>
+                    </div>
+                </div>
+                <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+            </div>
+            <div class="testimonial-item position-relative bg-white rounded mb-2 py-5 col-lg-4 col-md-6 mx-1 offer1">
+                <p>Unforgettable stay! The hotel's attention to detail and exceptional amenities made it a truly remarkable experience</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded" src="assets/images/test3.jpg"
+                        style="width: 45px; height: 45px;">
+                    <div class="ps-3">
+                        <h6 class="fw-bold mb-1">Vanessa Wambui</h6>
+                        <small>Auditor</small>
+                    </div>
+                </div>
+                <i class="fa fa-quote-right fa-2x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+            </div>
         </div>
     </div>
 </div>
-<div class="container-xxl">
-    <mat-card class="col-12">
-        <mat-card-header>
-            <mat-card-title class="text-black">Entire rental unit hosted by Gavin</mat-card-title>
-            <mat-card-subtitle>4 guests2 bedrooms3 beds2 baths</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-actions align="end">
-            <div><img src="assets/images/test1.jpeg" class="img" alt=""></div>
-        </mat-card-actions>
-    </mat-card>
+<!-- Testimonial End -->
 </div>
 <app-footer></app-footer>
+</div>

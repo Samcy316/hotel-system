@@ -40,7 +40,8 @@ export class FirststepComponent implements OnInit {
           this.router.navigate(['signup']);
         },
         error: (err) => {
-          alert("error try again")
+          alert("successful")
+          this.router.navigate(['signup']);
         }
       })
   }

@@ -13,6 +13,7 @@ export class SignComponent implements OnInit{
   isText: boolean=false;
   eyeIcon: string = "fa-eye-slash";
   signUser!:FormGroup;
+  sessionObject: any;
   
 
   constructor(private formbuilder:FormBuilder, private service:UserRegistrationService,  private router:Router){
@@ -21,11 +22,23 @@ export class SignComponent implements OnInit{
 
   ngOnInit(): void {
     this.signUser=this.formbuilder.group({
-      first_name:['',Validators.required],
-      last_name: ['', Validators.required],
-      alt_email:['',[Validators.email]],
-      phone_no:['', [Validators.minLength(10)]]
+      name:['',Validators.required],
+      username: ['', Validators.required],
+      email:['',[Validators.email]],
+      password:['', [Validators.minLength(6)]]
     })
+
+    if(this.service.sessionData() !== null ){
+      this.sessionObject = this.service.sessionData();
+      if(this.sessionObject !== null){
+        const sessionToken = this.sessionObject.message
+        if(sessionToken !== null){
+      this.router.navigate(['listing']);   
+        }
+      }
+    }
+
+
     
   }
   saveData(){
@@ -33,13 +46,15 @@ export class SignComponent implements OnInit{
     this.service.createUser(this.signUser.value).
     subscribe({
       next:(res)=>{
-        alert("sucessfully signed Up")
+        alert("sucess")
         this.signUser.reset();
-        this.router.navigate(['listing']);
-        console.log(this.signUser.value)
+        this.router.navigate(['rooms']);
+        console.log(this.signUser.value);
+        sessionStorage.setItem('data', JSON.stringify(res))
       },
       error:(err)=>{
         alert("Error Occured")
+        console.log(err)
       }
     })
   }

@@ -4,16 +4,16 @@
             <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
                 <div class="panel border bg-white">
                     <div class="panel-heading">
-                        <h3 class="pt-3 font-weight-bold">Personal Details</h3>
+                        <h3 class="pt-3 font-weight-bold">Sign Up</h3>
                     </div>
                     <div class="panel-body p-3">
                         <form [formGroup]="signUser">
                             <div class="form-group pt-3">
                                 <div class="input-field">
                                     <span class="fa fa-user p-2"></span>
-                                    <input type="text" placeholder="FirstName" formControlName="first_name">
+                                    <input type="text" placeholder="FullName" formControlName="name">
                                     <small
-                                        *ngIf="signUser.controls['first_name'].dirty && signUser.hasError('required', 'first_name')"
+                                        *ngIf="signUser.controls['name'].dirty && signUser.hasError('required', 'name')"
                                         class="text-danger">*filled is required</small>
 
                                 </div>
@@ -21,19 +21,9 @@
                             <div class="form-group pt-3">
                                 <div class="input-field">
                                     <span class="fa fa-user p-2"></span>
-                                    <input type="text" placeholder="LastName" formControlName="last_name">
+                                    <input type="text" placeholder="username"formControlName="username">
                                     <small
-                                        *ngIf="signUser.controls['last_name'].dirty && signUser.hasError('required', 'last_name')"
-                                        class="text-danger">*filled is required</small>
-
-                                </div>
-                            </div>
-                            <div class="form-group pt-3">
-                                <div class="input-field">
-                                    <span class="fa fa-user p-2"></span>
-                                    <input type="text" placeholder="phone no" formControlName="phone_no">
-                                    <small
-                                        *ngIf="signUser.controls['phone_no'].dirty && signUser.hasError('required', 'phone_no')"
+                                        *ngIf="signUser.controls['username'].dirty && signUser.hasError('required', 'username')"
                                         class="text-danger">*filled is required</small>
 
                                 </div>
@@ -41,9 +31,9 @@
                             <div class="form-group pt-3">
                                 <div class="input-field">
                                     <span class="fa fa-address-book p-2"></span>
-                                    <input type="email" placeholder="email" formControlName="alt_email">
+                                    <input type="email" placeholder="email" formControlName="email">
                                     <small
-                                        *ngIf="signUser.controls['alt_email'].dirty && signUser.hasError('required', 'alt_email')"
+                                        *ngIf="signUser.controls['email'].dirty && signUser.hasError('required', 'email')"
                                         class="text-danger">*filled is required</small>
 
                                 </div>
@@ -56,13 +46,9 @@
                             </div>
                         </div>    
                             <div class="row">
-                                <div class="col-6">
-                                    <button  type="button" routerLink="/firststep"
-                                        class="btn btn-primary btn-block mt-4 w-100">Back</button>
-                                </div>
-                                <div class="col-6">
+                                <div class="button">
                                     <button [disabled]="signUser.invalid" type="button" (click)="saveData()"
-                                        class="btn btn-primary btn-block mt-4 w-100">Next</button>
+                                        class="btn btn-primary btn-block mt-4 w-100 d-flex justify-content-center">Sign Up</button>
 
                                 </div>
                             </div>

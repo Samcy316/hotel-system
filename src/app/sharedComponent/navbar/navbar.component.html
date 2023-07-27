@@ -22,11 +22,11 @@
                     <div class="col-lg-7 px-5 text-start">
                         <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                             <i class="fa fa-envelope text-white me-2"></i>
-                            <p class="mb-0">info@example.com</p>
+                            <p class="mb-0 text-white">info@example.com</p>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2">
                             <i class="fa fa-phone-alt text-white me-2"></i>
-                            <p class="mb-0">+254790641259</p>
+                            <p class="mb-0 text-white">+254790641259</p>
                         </div>
                     </div>
                     <div class="col-lg-5 px-5 text-end">
@@ -45,7 +45,7 @@
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon bg-white"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto text-white py-0">
@@ -60,8 +60,8 @@
                         <!-- reactive forms -->
 
                         <div class="container d-flex justify-content-end">
-                            <button type="button" class="btn btn-link " routerLink="/firststep">
-                                Host Hotel
+                            <button type="button" class="btn btn-link bg-danger text-white " (click)="signOut()" >
+                                signOut
                             </button>
                         </div>
                     </div>
@@ -69,3 +69,4 @@
             </div>
         </div>
     </div>
+    

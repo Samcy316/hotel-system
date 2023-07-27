@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserRegistrationService } from '../user-registration.service';
 
 @Component({
   selector: 'app-roompage',
@@ -16,7 +17,7 @@ export class RoompageComponent {
   toggle = true;
   status = 'Enable';
 
-  constructor(private router: Router){
+  constructor(private router: Router, private service:UserRegistrationService ){
 
   }
 
@@ -24,7 +25,15 @@ export class RoompageComponent {
     this.toggle = !this.toggle;
     this.status = this.toggle ? 'Enable' : 'Disable';
   }
-  showRooms() {
-    this.router.navigateByUrl(`/listing/${1}`)
+  showRooms(location: string) {
+    console.log(this.service.sessionObject)
+    if(this.service.sessionObject !== undefined){
+        //do something here to check user permission for the location before showing rooms listings
+        this.router.navigateByUrl(`/listing/${location}`)
+    }else{
+      this.router.navigate(['signuser'])
+    }
+
+   
   }
 }

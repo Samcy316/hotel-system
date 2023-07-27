@@ -22,15 +22,15 @@
     "password": "samcy8357"
   },
   "personalDetail": {
-    "first_name": "samson",
-    "last_name": "kamau",
-    "alt_email": "samsonkamau316@gmail.com",
-    "phone_no": "0790641259"
+    "name": "samson",
+    "username": "kamau",
+    "email": "samsonkamau316@gmail.com",
+    "password": ""
   },
   "hoteldetails": {},
   "login": {
-    "username": "samcy",
-    "password": "samcy123"
+    "username": "leniss@gmail.com",
+    "password": "samcy8357"
   },
   "bookingHotel": {
     "firstname": "victoria",

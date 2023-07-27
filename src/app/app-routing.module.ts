@@ -24,7 +24,8 @@ const routes: Routes = [
   {path:'firststep', component:FirststepComponent},
   {path:'restuarant', component:RestuarantComponent},
   {path:'signuser', component:SignComponent},
-  {path:'book', component:BookpageComponent}
+  {path:'book/:id', component:BookpageComponent},
+
 
 ];
 

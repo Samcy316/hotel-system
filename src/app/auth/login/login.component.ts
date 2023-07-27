@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit{
   type:string ="password";
   isText: boolean=false;
   eyeIcon: string = "fa-eye-slash";
+  sessionObject: any;
   constructor(private formBuilder:FormBuilder, private service:UserRegistrationService, private router:Router ) {}
   loginHost!: FormGroup;
   ngOnInit(): void {
@@ -20,6 +21,15 @@ export class LoginComponent implements OnInit{
       username:['',Validators.required],
       password: ['',[Validators.minLength(6)]]
     })
+    if(this.service.sessionData() !== null ){
+      this.sessionObject = this.service.sessionData();
+      if(this.sessionObject !== null){
+        const sessionToken = this.sessionObject.message
+        if(sessionToken !== null){
+      this.router.navigate(['rooms']);   
+        }
+      }
+    }
     
   }
   loginData(){
@@ -28,7 +38,8 @@ export class LoginComponent implements OnInit{
       next:(res)=>{
         alert("login successfull")
         this.loginHost.reset();
-        this.router.navigate(['admin']);
+        this.router.navigate(['rooms']);
+        sessionStorage.setItem('data', JSON.stringify(res))
       },
       error:(err)=>{
         alert("error try again")
