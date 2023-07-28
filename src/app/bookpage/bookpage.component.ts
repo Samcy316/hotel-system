@@ -22,6 +22,7 @@ export class BookpageComponent implements OnInit{
   swimmingstatus: any;
   fitnessstatus: any;
   breakfaststatus: any;
+  parkingstatus:any;
   constructor(private formBuilder:FormBuilder, private activateedRoute:ActivatedRoute, private http:HttpClient, private router:Router){}
 
   ngOnInit() {
@@ -77,6 +78,13 @@ export class BookpageComponent implements OnInit{
         }else{
           console.log("true")
           res.hotelServicesDto.breakfast = this.breakfaststatus=true;
+        }
+        if(!res.hotelServicesDto.parking){
+          console.log("false")
+          res.hotelServicesDto.parking = this.parkingstatus=false;
+        }else{
+          console.log("true")
+          res.hotelServicesDto.breakfast = this.parkingstatus=true;
         }
        
         this.rooms = res;

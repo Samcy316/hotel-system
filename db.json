@@ -27,7 +27,11 @@
     "email": "samsonkamau316@gmail.com",
     "password": ""
   },
-  "hoteldetails": {},
+  "hoteldetails": [
+    {
+      "id": 1
+    }
+  ],
   "login": {
     "username": "leniss@gmail.com",
     "password": "samcy8357"

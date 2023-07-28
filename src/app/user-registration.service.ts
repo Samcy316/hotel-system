@@ -13,9 +13,14 @@ export class UserRegistrationService {
   }
   login(loginObj: any) {
     return this.http.post<any>('https://hotel-ipd6.onrender.com/accounts/login/user', loginObj);
+
+  }
+  
+  loginAdmin(loginObj: any) {
+    return this.http.post<any>('https://hotel-ipd6.onrender.com/accounts/login/admin', loginObj);
   }
   first(loginObj: any) {
-    return this.http.post('https://hotel-ipd6.onrender.com/accounts/create_admin_account', loginObj);
+    return this.http.post('https://hotel-ipd6.onrender.com/accounts/create_admin_account', loginObj,{observe: 'response'});
   }
   createUser(userSign: any): Observable<any> {
     return this.http.post("https://hotel-ipd6.onrender.com/accounts/create_user_account",userSign)

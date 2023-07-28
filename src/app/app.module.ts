@@ -34,6 +34,7 @@ import { BookpageComponent } from './bookpage/bookpage.component';
 import { NavbarComponent } from './sharedComponent/navbar/navbar.component';
 import { FooterComponent } from './sharedComponent/footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
+import { LoginAdminComponent } from './auth/login-admin/login-admin.component';
 
 
 
@@ -55,6 +56,7 @@ import {MatCardModule} from '@angular/material/card';
     BookpageComponent,
     NavbarComponent,
     FooterComponent,
+    LoginAdminComponent,
     
   
   ],

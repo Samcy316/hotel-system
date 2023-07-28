@@ -8,8 +8,9 @@ import { selfOnboarding } from '../modal/onboarding.modal';
 export class AddhotelService {
 
   constructor(private http: HttpClient) { }
+  apiUrl='http://localhost:3000/hoteldetails';
   public addHotel1(addhotel:FormData){
-    return this.http.post<selfOnboarding>("https://hotel-ipd6.onrender.com/admin/host", addhotel);
+    return this.http.post<selfOnboarding>("http://localhost:3000/hoteldetails", addhotel);
 
   }
   public addHotel2(obj:any){
@@ -19,7 +20,7 @@ export class AddhotelService {
     return this.http.get<selfOnboarding[]>("https://hotel-ipd6.onrender.com/hotels/listing/get_hotel/3");
   }
   public deleteHotel(id: number){
-    return this.http.delete(" http://localhost:3000/hoteldetails"+id)
+    return this.http.delete(`${this.apiUrl}${id}`)
   }
 
 }

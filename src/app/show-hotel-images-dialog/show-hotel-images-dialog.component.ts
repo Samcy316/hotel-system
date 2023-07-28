@@ -8,6 +8,11 @@ import { FileHandle } from '../modal/file-handle.modal';
 })
 export class ShowHotelImagesDialogComponent implements OnInit{
   constructor(@Inject(MAT_DIALOG_DATA) public data: any){}
+  item={
+    image1:"assets/images/room-1.jpg",
+    image2:"assets/images/room-2.jpg",
+    image3:"assets/images/room-3.jpg",
+  }
 
   ngOnInit(): void {
    this.receiveImage(); 

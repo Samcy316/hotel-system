@@ -35,7 +35,10 @@ export class FirststepComponent implements OnInit {
     this.service.first(this.firstHost.value).
       subscribe({
         next: (res) => {
-          alert("login successfull")
+          alert("successfull")
+          console.log(res);
+          console.log(res.headers.getAll('Set-Cookie'));
+          
           this.firstHost.reset();
           this.router.navigate(['signup']);
         },

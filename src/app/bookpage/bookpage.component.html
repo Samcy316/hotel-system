@@ -41,7 +41,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <span class="fa fa-car  me-2"></span>
+                        <span [ngStyle]="{ color: parkingstatus ? 'green' : 'red' }" class="fa fa-car  me-2"></span>
                         <p>Parking Area</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
