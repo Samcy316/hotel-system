@@ -57,10 +57,12 @@ export class ListingComponent implements OnInit {
   }
   showRooms(location: string) {
     this.router.navigateByUrl(`/listing/${location}`)
+    window.location.reload()
     
   }
   showHotel(location: number){
     this.router.navigateByUrl(`/book/${location}`)
+    
   }
   signOut(){
     sessionStorage.clear()

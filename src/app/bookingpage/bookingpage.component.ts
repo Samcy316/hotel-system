@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { hotelBooking } from '../modal/userBooking';
 import { BookingService } from '../services/booking.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-bookingpage',
@@ -11,7 +13,21 @@ import { BookingService } from '../services/booking.service';
 })
 export class BookingpageComponent implements OnInit{
   paymentHandler: any = null;
-  constructor(private formBuilder:FormBuilder, private service:BookingService) {}
+  houseData:any
+  constructor(private formBuilder:FormBuilder, private service:BookingService, private router:Router) {
+    this.router.events.pipe(filter((e)=> e instanceof NavigationEnd)).subscribe((e:any)=>{
+      const navigation=this.router.getCurrentNavigation();
+      if(navigation?.extras?.state){
+        this.houseData=navigation.extras.state['hotel']||{};
+      }else{
+        this.houseData={};
+      }
+    });
+    console.log(this.houseData);
+    
+  }
+  
+  
   hotelBook:hotelBooking[]=[];
   bookingUser!:FormGroup;
   

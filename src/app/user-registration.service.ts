@@ -9,7 +9,7 @@ export class UserRegistrationService {
 
   constructor(private http: HttpClient) { }
   createHost(adminDto: any): Observable<any> {
-    return this.http.post('https://hotel-ipd6.onrender.com/accounts/add_details', adminDto);
+    return this.http.post('http://localhost:3000/personalDetail', adminDto);
   }
   login(loginObj: any) {
     return this.http.post<any>('https://hotel-ipd6.onrender.com/accounts/login/user', loginObj);
@@ -20,7 +20,7 @@ export class UserRegistrationService {
     return this.http.post<any>('https://hotel-ipd6.onrender.com/accounts/login/admin', loginObj);
   }
   first(loginObj: any) {
-    return this.http.post('https://hotel-ipd6.onrender.com/accounts/create_admin_account', loginObj,{observe: 'response'});
+    return this.http.post('  http://localhost:3000/createaccount', loginObj,{observe: 'response'});
   }
   createUser(userSign: any): Observable<any> {
     return this.http.post("https://hotel-ipd6.onrender.com/accounts/create_user_account",userSign)

@@ -17,19 +17,22 @@
     "name": "typicode"
   },
   "createaccount": {
-    "username": "samson kamau",
+    "username": "samcy",
     "email": "samsonkamau316@gmail.com",
-    "password": "samcy8357"
+    "password": "samcy123"
   },
   "personalDetail": {
-    "name": "samson",
-    "username": "kamau",
-    "email": "samsonkamau316@gmail.com",
-    "password": ""
+    "first_name": "samson",
+    "last_name": "kamau",
+    "alt_email": "samsonkamau316@gmail.com",
+    "phone_no": "0790641259"
   },
   "hoteldetails": [
     {
       "id": 1
+    },
+    {
+      "id": 2
     }
   ],
   "login": {

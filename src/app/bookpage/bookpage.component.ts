@@ -91,5 +91,8 @@ export class BookpageComponent implements OnInit{
         console.log(this.rooms);
   })
 }
+bookHotel(){
+  this.router.navigateByUrl('/booking',{state:{hotel:this.rooms}})
+}
 
 }
